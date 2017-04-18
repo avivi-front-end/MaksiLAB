@@ -1,0 +1,35 @@
+.header {
+  padding: 38px 0 85px;
+  display: flex;
+  justify-content: space-between;
+  &__rigth-wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.menu {
+  display: flex;
+  height: 54px;
+  list-style: none;
+  align-items: center;
+  margin-right: 32px;
+  &__item {
+    &:not(:last-child) {
+      margin-right: 27px;
+    }
+  }
+  &__link {
+    font-family: $roboto-con-b;
+    font-size: 17px;
+    line-height: 17px;
+    color: #464646;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    &.active {
+      color: #00bbd4;
+    }
+    &:hover {
+      color: #00bbd4;
+    }
+  }
+}

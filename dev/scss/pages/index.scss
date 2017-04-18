@@ -1,0 +1,134 @@
+a {
+  text-decoration: none;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  height: 54px;
+  padding: 6px;
+  border-radius: 40px;
+  background: linear-gradient(to right, rgba(200,226,169,1) 0%, rgba(128,221,233,1) 100%);
+  -webkit-transition: all 0.0s linear;
+  transition: all 0.0s linear;
+  &:hover {
+    transform: scale(1.01);
+  }
+  &__text {
+    display: flex;
+    padding: 0 36px;
+    align-items: center;
+    background-color: #00bbd4;
+    border-radius: 40px;
+    font-family: $roboto-con-b;
+    font-size: 17px;
+    line-height: 17px;
+    color: #fff;
+  }
+}
+.logo {
+  display: flex;
+  align-items: center;
+  width: 145px;
+  height: 84px;
+}
+.logo img{
+  object-fit: cover;
+}
+h1 {
+  display: block;
+
+  font-family: $roboto-con-b;
+  font-size: 33px;
+  text-align: center;
+}
+h2 {
+  display: block;
+  font-family: $roboto-con-b;
+  font-size: 20px;
+  line-height: 33px;
+  color: #464646;
+  text-align: center;
+}
+p {
+  font-family: $roboto-con;
+  font-size: 20px;
+  line-height: 33px;
+  color: #464646;
+  text-align: center;
+}
+.index {
+  &__wrap-text {
+    margin-bottom: 46px;
+    padding: 0 45px;
+  }
+  &__title {
+    color: #00bbd4;
+    margin-bottom: 27px;
+  }
+  &__subtitle {
+    margin-bottom: 33px;
+  }
+  &__text {
+    margin-bottom: 37px;
+  }
+}
+
+
+.images {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  &__notebook {
+    position: relative;
+    z-index: 2;
+    width: 672px;
+    height: auto;
+  }
+  &__pen {
+    position: absolute;
+    left: -68px;
+    top: 157px;
+    width: 104px;
+    height: 247px;
+  }
+  &__mouse {
+    position: absolute;
+    right: -201px;
+    top: 178px;
+    width: 184px;
+    height: 192px;
+  }
+  &__note {
+    position: absolute;
+    left: -356px;
+    top: 85px;
+    width: 334px;
+    height: 406px;
+  }
+  &__keyboard {
+    position: absolute;
+    z-index: 1;
+    left: -129px;
+    top: 0;
+    width: 435px;
+    height: 596px;
+  }
+  &__coffee {
+    position: absolute;
+    z-index: 1;
+    right: -129px;
+    top: 0;
+    width: 237px;
+    height: 237px;
+  }
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

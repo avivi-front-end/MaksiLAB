@@ -50,6 +50,9 @@ if (ieDetector.ieVersion == 10 || ieDetector.ieVersion == 11) {
 
 $(function () {
 
-    // placeholder
-    //-----------------------------------------------------------------------------
-})
+    $('.menu__link').click(function () {
+        $('.menu__link').removeClass('active');
+        $(this).addClass('active');
+    });
+
+});
