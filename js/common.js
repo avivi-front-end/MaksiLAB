@@ -55,4 +55,16 @@ $(function () {
         $(this).addClass('active');
     });
 
+    $('.js-question-submit').click(function () {
+        $('.js-question-form').submit();
+    });
+
+    $('.js-question-form').validate({
+        rules: {
+            name: {
+                required: true
+            }
+        }
+    });
+
 });
