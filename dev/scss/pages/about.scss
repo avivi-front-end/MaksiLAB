@@ -1,0 +1,216 @@
+.about {
+  position: relative;
+  &__title {
+    color: #00bbd4;
+    margin-bottom: 107px;
+    @media (max-width: $screen-sm-max) {
+      margin-bottom: 38px;
+    }
+  }
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  &__item {
+    position: relative;
+    height: 411px;
+    @media (max-width: $screen-sm-max) {
+      height: auto;
+      padding: 38px;
+    }
+    @media (max-width: $screen-xs-max) {
+      padding: 20px 15px;
+    }
+    &__title {
+      display: block;
+      margin-top: 109px;
+      margin-bottom: 37px;
+      font-family: $roboto-con-b;
+      font-size: 33px;
+      color: #fff;
+      @media (max-width: $screen-md-max) {
+        font-size: 28px;
+      }
+      @media (max-width: $screen-sm-max) {
+        margin-top: 0;
+        margin-bottom: 25px;
+      }
+      @media (max-width: $screen-xs-max) {
+        font-size: 23px;
+        margin-bottom: 22px;
+      }
+    }
+    &__text {
+      display: block;
+      font-family: $roboto-con;
+      font-size: 20px;
+      color: #fff;
+    }
+    &--blue {
+      z-index: 1;
+      background-color: #00bbd4;
+    }
+    &--green {
+      z-index: 2;
+      background-color: #8ac149;
+    }
+    &--orange {
+      z-index: 3;
+      background-color: #fec107;
+    }
+    .container {
+      height: 100%;
+    }
+  }
+  &__text-wrap {
+    width: 50%;
+    @media (max-width: $screen-md-max) {
+      width: 40%;
+    }
+    @media (max-width: $screen-sm-max) {
+      width: 100%;
+    }
+  }
+  &__item-wrap {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100%;
+    @media (max-width: $screen-sm-max) {
+      position: static;
+    }
+  }
+  &__img {
+    position: relative;
+    width: 50%;
+    @media (max-width: $screen-md-max) {
+      width: 60%;
+    }
+    @media (max-width: $screen-sm-max) {
+      display: none;
+    }
+    img {
+      position: absolute;
+      bottom: 0;
+    }
+    &--right {
+      right: 0;
+    }
+    &--left {
+      left: 0;
+    }
+  }
+  &__img-1 {
+    width: 422px;
+    height: 506px;
+  }
+  &__img-2 {
+    width: 353px;
+    height: 494px;
+  }
+  &__img-3 {
+    width: 417px;
+    height: 528px;
+  }
+  &__dec-icon {
+    position: absolute;
+    z-index: -1;
+    opacity: .9;
+    @media (max-width: $screen-sm-max) {
+      display: none;
+    }
+  }
+  &__ico-1 {
+    width: 127px;
+    height: 123px;
+    left: 159px;
+    top: 170px;
+  }
+  &__ico-2 {
+    width: 80px;
+    height: 76px;
+    left: 222px;
+    top: 245px;
+  }
+  &__ico-3 {
+    width: 92px;
+    height: 115px;
+    right: 183px;
+    top: 243px;
+  }
+}
+.guarantee {
+  position: relative;
+  padding: 102px 0 110px;
+  @media (max-width: $screen-sm-max) {
+    padding: 38px 0;
+  }
+  &__title {
+    color: #00bbd4;
+    margin-bottom: 107px;
+    @media (max-width: $screen-sm-max) {
+      margin-bottom: 38px;
+    }
+  }
+  &__item-wrap {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    @media (max-width: $screen-sm-max) {
+      flex-wrap: wrap;
+    }
+  }
+  &__item {
+    display: flex;
+    width: 25%;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    @media (max-width: $screen-sm-max) {
+      width: 50%;
+      margin-bottom: 30px;
+    }
+    @media (max-width: $screen-xs-max) {
+      width: 100%;
+      margin-bottom: 50px;
+      flex-direction: column-reverse;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    img {
+      margin-bottom: 31px;
+      width: 91px;
+      height: 91px;
+      @media (max-width: $screen-xs-max) {
+        margin-bottom: 0;
+        margin-top: 15px;
+      }
+    }
+    &__text {
+      display: block;
+      padding: 0 10px;
+      font-family: $roboto-con;
+      font-size: 20px;
+      color: #464646;
+      width: 100%;
+      text-align: center;
+    }
+  }
+  &__ico-1 {
+    width: 232px;
+    height: 272px;
+    left: 0;
+    top: -42px;
+  }
+  &__ico-2 {
+    width: 219px;
+    height: 206px;
+    right: 60px;
+    bottom: 10px;
+  }
+}
