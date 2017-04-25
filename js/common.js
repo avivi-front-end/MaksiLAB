@@ -99,10 +99,10 @@ $(function () {
             $('.index__ico-1, .index__ico-8, .index__ico-6').css('transform','scale(1)');
         }, 4300);
         setTimeout(function () {
-            $('.index__ico-2, .index__ico-4, .index__ico-7').css('transform','scale(1)');
+            $('.index__ico-2, .index__ico-4, .index__ico-7, .index__ico-10').css('transform','scale(1)');
         }, 4500);
         setTimeout(function () {
-            $('.index__ico-3, .index__ico-5').css('transform','scale(1)');
+            $('.index__ico-3, .index__ico-5, .index__ico-9').css('transform','scale(1)');
         }, 4700);
 
         if ($('.outsource__dec-icon').length > 0) {

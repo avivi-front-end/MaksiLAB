@@ -166,6 +166,20 @@ p {
     width: 67px;
     height: 67px;
   }
+  &__ico-9 {
+    right: -119px;
+    bottom: 34px;
+    width: 74px;
+    height: 74px;
+    z-index: 2;
+  }
+  &__ico-10 {
+    right: -165px;
+    bottom: 72px;
+    width: 82px;
+    height: 78px;
+    z-index: 1;
+  }
 }
 
 .images {
@@ -312,31 +326,43 @@ p {
     margin-top: 37px;
     width: 71px;
     height: 71px;
+    animation-duration: 2s;
+    animation-delay: .5s;
   }
   &__ico-2 {
     margin-top: 42px;
     width: 69px;
     height: 61px;
+    animation-duration: 2s;
+    animation-delay: .7s;
   }
   &__ico-3 {
     margin-top: 44px;
     width: 57px;
     height: 57px;
+    animation-duration: 2s;
+    animation-delay: .9s;
   }
   &__ico-4 {
     margin-top: 37px;
     width: 72px;
     height: 72px;
+    animation-duration: 2s;
+    animation-delay: .5s;
   }
   &__ico-5 {
     margin-top: 37px;
     width: 84px;
     height: 72px;
+    animation-duration: 2s;
+    animation-delay: .7s;
   }
   &__ico-6 {
     margin-top: 50px;
     width: 76px;
     height: 53px;
+    animation-duration: 2s;
+    animation-delay: .9s;
   }
   &__text {
     font-family: $roboto-con;
@@ -359,6 +385,18 @@ p {
       margin-bottom: 28px;
     }
   }
+  //&__img {
+  //  overflow: hidden;
+  //  position: relative;
+  //  img {
+  //    position: absolute;
+  //    height: 100%;
+  //    width: auto;
+  //    top: 50%;
+  //    left: 50%;
+  //    transform: translate(-50%,-50%);
+  //  }
+  //}
   &__text {
     margin-bottom: 44px;
     padding: 0 20px;
@@ -385,6 +423,10 @@ p {
       &:not(:last-child) {
         margin-bottom: 15px;
       }
+    }
+    &__img {
+      animation-duration: 2s;
+      animation-delay: .4s;
     }
     &__title {
       position: relative;
