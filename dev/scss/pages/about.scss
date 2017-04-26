@@ -16,11 +16,8 @@
     position: relative;
     height: 411px;
     @media (max-width: $screen-sm-max) {
-      height: auto;
-      padding: 38px;
-    }
-    @media (max-width: $screen-xs-max) {
-      padding: 20px 15px;
+      height: 200px;
+      padding: 0;
     }
     &__title {
       display: block;
@@ -33,12 +30,14 @@
         font-size: 28px;
       }
       @media (max-width: $screen-sm-max) {
-        margin-top: 0;
-        margin-bottom: 25px;
+        margin: 15px 0;
       }
       @media (max-width: $screen-xs-max) {
-        font-size: 23px;
-        margin-bottom: 22px;
+        font-size: 22px;
+        margin-bottom: 15px;
+      }
+      @media (max-width: 390px) {
+        font-size: 18px;
       }
     }
     &__text {
@@ -46,6 +45,12 @@
       font-family: $roboto-con;
       font-size: 20px;
       color: #fff;
+      @media (max-width: $screen-xs-max) {
+        font-size: 15px;
+      }
+      @media (max-width: 390px) {
+        font-size: 12px;
+      }
     }
     &--blue {
       z-index: 1;
@@ -69,7 +74,10 @@
       width: 40%;
     }
     @media (max-width: $screen-sm-max) {
-      width: 100%;
+      width: 65%;
+    }
+    @media (max-width: $screen-xs-max) {
+      width: calc(100% - 169px);
     }
   }
   &__item-wrap {
@@ -90,7 +98,12 @@
       width: 60%;
     }
     @media (max-width: $screen-sm-max) {
-      display: none;
+      width: 31%;
+      height: 100%;
+      display: inline-block;
+    }
+    @media (max-width: $screen-xs-max) {
+      width: 169px;
     }
     img {
       position: absolute;
@@ -103,17 +116,40 @@
       left: 0;
     }
   }
+  &__img-desktop {
+    @media (max-width: $screen-sm-max) {
+      display: none;
+    }
+  }
+  &__img-mobile {
+    display: none;
+    @media (max-width: $screen-sm-max) {
+      display: block;
+    }
+  }
   &__img-1 {
     width: 422px;
     height: 506px;
+  }
+  &__img-1-m {
+    width: 169px;
+    height: 228px;
   }
   &__img-2 {
     width: 353px;
     height: 494px;
   }
+  &__img-2-m {
+    width: 136px;
+    height: 218px;
+  }
   &__img-3 {
     width: 417px;
     height: 528px;
+  }
+  &__img-3-m {
+    width: 160px;
+    height: 227px;
   }
   &__dec-icon {
     position: absolute;

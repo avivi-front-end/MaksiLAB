@@ -1,0 +1,14 @@
+.overlay
+.popup
+    i.popup__close.js-close
+    .popup__callback#popup-callback.js-popup-main
+        span.popup__title.wow.slideInUp Есть вопросы?  Хотите подключиться?
+        span.popup__subtitle.wow.slideInUp Оставьте свой номер телефона, мы перезвоним и подробно ответим на все интересующие вопросы.
+        form.question__form.js-question-form-pop
+            input(type="text", name="name_pop", placeholder="Телефон, имя").input.question__input.wow.slideInUp.popup__input
+            span.btn.question__submit.js-question-submit-pop.wow.slideInUp
+                span.btn__text Перезвоните мне
+    .popup__thx#popup-thx.js-popup-thx
+        .flex-center
+            span.popup__title Благодарим!
+            span.popup__title Ваша заявка принята.

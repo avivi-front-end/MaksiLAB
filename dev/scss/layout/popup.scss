@@ -1,0 +1,88 @@
+.overlay {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.5);
+  z-index: 999;
+}
+.popup {
+  display: none;
+  position: fixed;
+  max-width: 750px;
+  max-height: 314px;
+  height: 100%;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  border-radius: 7px;
+  background-color: #fff;
+  @media (max-width: 1030px) {
+    width: 95%;
+    max-height: none;
+    height: auto;
+    padding: 30px 15px;
+  }
+
+  &__title {
+    display: block;
+    width: 100%;
+    font-family: $roboto-con-b;
+    font-size: 33px;
+    text-align: center;
+    color: #464646;
+    @media (max-width: $screen-xs-max) {
+      font-size: 28px;
+    }
+  }
+  &__subtitle {
+    display: block;
+    margin: 22px 0 33px;
+    padding: 0 116px;
+    width: 100%;
+    text-align: center;
+    font-family: $roboto-con;
+    font-size: 17px;
+    color: #464646;
+    @media (max-width: 1030px) {
+      padding: 0 100px;
+    }
+    @media (max-width: $screen-sm-max) {
+      padding: 0 60px;
+    }
+    @media (max-width: $screen-sm-max) {
+      padding: 0;
+    }
+  }
+  &__input {
+    border: 6px solid #e8e8e8!important;
+  }
+  &__callback {
+    display: none;
+    padding-top: 60px;
+    height: 100%;
+    @media (max-width: 1030px) {
+      padding: 0;
+    }
+  }
+  &__thx {
+    display: none;
+    height: 100%;
+  }
+  &__close {
+    position: absolute;
+    right: 11px;
+    top: 12px;
+    width: 11px;
+    height: 11px;
+    cursor: pointer;
+    background: url("../img/pngsprite/ico-close.png") no-repeat center;
+    background-size: 100%;
+  }
+}

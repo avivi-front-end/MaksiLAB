@@ -50,15 +50,66 @@ if (ieDetector.ieVersion == 10 || ieDetector.ieVersion == 11) {
 
 $(function () {
 
-    $('.js-question-submit').click(function () {
+    $('.js-show-pop').click(function () {
+        var popup = '#popup-' + $(this).data('popup');
+        $(popup).show();
+        $('.popup').show();
+        $('.overlay').show();
+    });
+
+    $('.overlay, .js-close').click(function () {
+        $('.popup').hide();
+        $('.popup>div').hide();
+        $('.overlay').hide();
+    });
+
+    $('.js-question-submit').click(function (e) {
+        e.preventDefault();
         $('.js-question-form').submit();
     });
 
-    $('.js-question-form').validate({
+    $('.js-question-submit-pop').click(function (e) {
+        e.preventDefault();
+        $('.js-question-form-pop').submit();
+    });
+
+    $(".js-question-form").submit(function(e) {
+        e.preventDefault();
+        }).validate({
         rules: {
             name: {
                 required: true
             }
+        },
+        submitHandler: function(form) {
+            $('.popup').show();
+            $('.overlay').show();
+            $('#popup-thx').show();
+            setTimeout(function () {
+                $('.popup__thx').hide();
+                $('.overlay').hide();
+                $('.popup').hide();
+            }, 4000);
+        }
+    });
+
+    $(".js-question-form-pop").submit(function(e) {
+        e.preventDefault();
+    }).validate({
+        rules: {
+            name_pop: {
+                required: true
+            }
+        },
+        submitHandler: function(form, event) {
+            event.preventDefault();
+            $('.js-popup-main').hide();
+            $('.js-popup-thx').show();
+            setTimeout(function () {
+                $('.popup__thx').hide();
+                $('.overlay').hide();
+                $('.popup').hide();
+            }, 4000);
         }
     });
 
@@ -111,10 +162,7 @@ $(function () {
                 var posItion =  parseInt(SKOLKO * 0.5);
                 $('.outsource__dec-icon').css('transform','translateY('+posItion+'px)');
             });
-        } else {
-            console.log("index dec no");
         }
-
 
         if ($('.js-about-dec').length > 0) {
             $(window).scroll(function(){
@@ -122,8 +170,6 @@ $(function () {
                 var posItion2 =  parseInt(SKOLKO2 * 0.5);
                 $('.js-about-dec').css('transform','translateY('+posItion2+'px)');
             });
-        } else {
-            console.log("about dec no");
         }
 
         if ($('.js-guarantee-dec').length > 0) {
@@ -132,8 +178,6 @@ $(function () {
                 var posItion3 =  parseInt(SKOLKO3 * 0.5);
                 $('.js-guarantee-dec').css('transform','translateY('+posItion3+'px)');
             });
-        } else {
-            console.log("about guarantee dec no");
         }
 
         if ($('.trainings__dec-icon').length > 0) {
@@ -142,11 +186,13 @@ $(function () {
                 var posItion4 =  parseInt(SKOLKO4 * 0.5);
                 $('.trainings__dec-icon').css('transform','translateY('+posItion4+'px)');
             });
-        } else {
-            console.log("trainings dec no");
         }
 
     });
+
+    if ($(window).outerWidth() < 1030) {
+        $('.outsource__img__wrap').removeClass('shake wow')
+    }
 
     new WOW().init();
 

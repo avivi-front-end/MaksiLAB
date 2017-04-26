@@ -17,7 +17,7 @@
             <li class="menu__item"><a class="menu__link active" href="trainings.html">Обучение</a></li>
             <li class="menu__item"><a class="menu__link scrollto" href="index.html#services">Услуги</a></li>
             <li class="menu__item"><a class="menu__link scrollto" href="index.html#contacts">Контакты</a></li>
-          </ul><a class="btn" href="#"><span class="btn__text">Перезвоните мне</span></a>
+          </ul><a class="btn js-show-pop" href="#" data-popup="callback"><span class="btn__text">Перезвоните мне</span></a>
         </div>
       </div>
     </div>
@@ -62,8 +62,19 @@
             <li class="menu__item"><a class="menu__link active" href="trainings.html">Обучение</a></li>
             <li class="menu__item"><a class="menu__link scrollto" href="index.html#services">Услуги</a></li>
             <li class="menu__item"><a class="menu__link scrollto" href="index.html#contacts">Контакты</a></li>
-          </ul><a class="footer__text wow slideInUp" href="tel:+388007005096">Звоните нам: 8 800 700 50 96</a>
+          </ul><a class="footer__text wow slideInUp" href="tel:+73433451388">Звоните нам: +7 (343) 345-13-88</a>
         </div>
+      </div>
+    </div>
+    <div class="overlay"></div>
+    <div class="popup"><i class="popup__close js-close"></i>
+      <div class="popup__callback js-popup-main" id="popup-callback"><span class="popup__title wow slideInUp">Есть вопросы?  Хотите подключиться?</span><span class="popup__subtitle wow slideInUp">Оставьте свой номер телефона, мы перезвоним и подробно ответим на все интересующие вопросы.</span>
+        <form class="question__form js-question-form-pop">
+          <input class="input question__input wow slideInUp popup__input" type="text" name="name_pop" placeholder="Телефон, имя"><span class="btn question__submit js-question-submit-pop wow slideInUp"><span class="btn__text">Перезвоните мне</span></span>
+        </form>
+      </div>
+      <div class="popup__thx js-popup-thx" id="popup-thx">
+        <div class="flex-center"><span class="popup__title">Благодарим!</span><span class="popup__title">Ваша заявка принята.</span></div>
       </div>
     </div>
   </div>
