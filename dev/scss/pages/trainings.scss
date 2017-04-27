@@ -8,6 +8,38 @@
       margin-bottom: 38px;
     }
   }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    @media (max-width: $screen-md-max) {
+      width: 100%;
+    }
+  }
+  &__img {
+    position: relative;
+    height: 240px;
+    @media (max-width: 1030px) {
+      width: 100%;
+    }
+    @media (max-width: $screen-xs-max) {
+      height: 190px;
+    }
+    &__ico {
+      position: absolute;
+      width: 91px!important;
+      height: 91px!important;
+      left: 50%;
+      top: 50%;
+      margin: -45px 0 0 -45px;
+    }
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
   &__item-wrap {
     display: flex;
     margin-bottom: 70px;
@@ -18,32 +50,49 @@
     }
   }
   &__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
-    padding: 71px 42px 58px 46px;
+    position: relative;
+    padding: 59px 42px 58px 46px;
     @media (max-width: $screen-md-max) {
-      width: 100%;
       padding: 35px;
-      //&:not(:last-child) {
-      //  margin-bottom: 15px;
-      //}
     }
     @media (max-width: $screen-xs-max) {
       padding: 15px;
     }
+    &:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 18.5px 19px 18.5px;
+      top: -19px;
+      left: 50%;
+      right: auto;
+      transform: translate(-50%, 0);
+    }
     &--blue {
       background-color: #00bbd4;
+      &:after {
+        border-color: transparent transparent #00bbd4 transparent;
+      }
     }
     &--green {
       background-color: #8ac149;
+      &:after {
+        border-color: transparent transparent #8ac149 transparent;
+      }
     }
     &--yellow {
       background-color: #cddc39;
+      &:after {
+        border-color: transparent transparent #cddc39 transparent;
+      }
     }
     &--orange {
       background-color: #fec107;
+      &:after {
+        border-color: transparent transparent #fec007 transparent;
+      }
     }
     &__text {
       display: block;
@@ -55,19 +104,6 @@
       }
       &:not(:last-child) {
         margin-bottom: 24px;
-      }
-    }
-    img {
-      margin-bottom: 54px;
-      width: 91px;
-      height: 91px;
-      @media (max-width: $screen-md-max) {
-        margin-bottom: 30px;
-      }
-      @media (max-width: $screen-xs-max) {
-        margin-bottom: 15px;
-        width: 50px;
-        height: 50px;
       }
     }
   }
