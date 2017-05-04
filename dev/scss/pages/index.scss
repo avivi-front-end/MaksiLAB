@@ -4,6 +4,12 @@ a {
 .page-wrapper {
   overflow: hidden;
   padding-top: 207px;
+  @media (max-width: $screen-md-max) {
+    padding-top: 100px;
+  }
+  @media (max-width: $screen-sm-max) {
+    padding-top: 90px;
+  }
 }
 
 img {
@@ -43,6 +49,10 @@ img {
     font-size: 17px;
     line-height: 17px;
     color: #fff;
+    @media (max-width: 420px) {
+      padding: 0 12px;
+      font-size: 14px;
+    }
   }
 }
 .logo {
@@ -50,6 +60,14 @@ img {
   align-items: center;
   width: 145px;
   height: 84px;
+  @media (max-width: $screen-md-max) {
+    width: 100px;
+    height: auto;
+  }
+  @media (max-width: 420px) {
+    width: 85px;
+    height: auto;
+  }
 }
 .logo img{
   object-fit: cover;

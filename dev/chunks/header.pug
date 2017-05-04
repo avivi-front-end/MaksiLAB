@@ -4,6 +4,9 @@
             a(href="index.html").logo
                 img(src="img/logo.png" alt="")
             .header__rigth-wrap
+                .overlay
+                .menu__icon.js-menu
+                    +icon("menu")
                 ul.menu
                     li.menu__item
                         a(href="about.html").menu__link О нас
@@ -13,6 +16,8 @@
                         a(href="#services").menu__link.scrollto Услуги
                     li.menu__item
                         a(href="#contacts").menu__link.scrollto Контакты
+                    li.menu__close
+                        i.popup__close.js-close
                 a(href="#", data-popup="callback").btn.js-show-pop
                     span.btn__text Перезвоните мне
 

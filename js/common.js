@@ -61,6 +61,7 @@ $(function () {
         $('.popup').hide();
         $('.popup>div').hide();
         $('.overlay').hide();
+        $('.menu').show().css('transform','translateX(101%)');
     });
 
     $('.js-question-submit').click(function (e) {
@@ -111,19 +112,6 @@ $(function () {
                 $('.popup').hide();
             }, 4000);
         }
-    });
-
-    $(window).load(function () {
-
-        if ($(window).outerWidth() > 768) {
-            $('.trainings__item').matchHeight({
-                byRow: false,
-                property: 'height'
-            });
-        } else {
-            return false
-        }
-
     });
 
     $(document).ready(function() {
@@ -187,6 +175,28 @@ $(function () {
                 $('.trainings__dec-icon').css('transform','translateY('+posItion4+'px)');
             });
         }
+
+        $('.js-menu').click(function () {
+           $('.menu').css('transform','translateX(0)');
+           $('.overlay').show();
+        });
+
+    });
+
+    $(window).load(function () {
+
+        $('.menu').css('top','0');
+
+        if ($(window).outerWidth() > 768) {
+            $('.trainings__item').matchHeight({
+                byRow: false,
+                property: 'height'
+            });
+        } else {
+
+        }
+
+
 
     });
 
