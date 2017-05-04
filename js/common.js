@@ -61,7 +61,10 @@ $(function () {
         $('.popup').hide();
         $('.popup>div').hide();
         $('.overlay').hide();
-        $('.menu').show().css('transform','translateX(101%)');
+        if ($(window).outerWidth() < 768) {
+            $('.menu').show().css('transform','translateX(101%)');
+        }
+
     });
 
     $('.js-question-submit').click(function (e) {
